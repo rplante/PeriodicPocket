@@ -12,7 +12,7 @@ import android.util.Log;
  */
 
 public class DatabaseHandler extends SQLiteOpenHelper {
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NAME = "ElementInfo";
     //Elements Table
     private static final String TABLE_ELEMENTS = "Elements";
@@ -34,6 +34,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        String REMOVE_OLD_TABLE = "DROP TABLE IF EXISTS " + TABLE_ELEMENTS;
         String CREATE_ELEMENTS_TABLE = "CREATE TABLE " + TABLE_ELEMENTS + "(" +
                                         PK_NAME + " TEXT PRIMARY KEY, " +
                                         SYMBOL + " TEXT, " +
@@ -44,6 +45,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                                         FAMILY + " NUMBER, " +
                                         STATE + " TEXT, " +
                                         RADIOACTIVITY + " TEXT" + ")";
+        db.execSQL(REMOVE_OLD_TABLE);
         db.execSQL(CREATE_ELEMENTS_TABLE);
     }
 
@@ -80,12 +82,12 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         if(cursor != null && cursor.moveToFirst()) {
             element = new Element(cursor.getString(0),
                     cursor.getString(1),
-                    Integer.parseInt(cursor.getString(2)),
-                    Float.parseFloat(cursor.getString(3)),
+                    cursor.getInt(2),
+                    cursor.getFloat(3),
                     cursor.getString(4),
                     cursor.getString(5),
-                    Family.values()[Integer.parseInt(cursor.getString(6))],
-                    State.values()[Integer.parseInt(cursor.getString(7))],
+                    Family.values()[cursor.getInt(6)],
+                    State.values()[cursor.getInt(7)],
                     Boolean.parseBoolean(cursor.getString(8)));
 
             cursor.close();

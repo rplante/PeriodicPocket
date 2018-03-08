@@ -12,4 +12,18 @@ public enum State {
     State(int i) {
         this.state = i;
     }
+
+    @Override
+    public String toString() {
+        String state;
+        switch(this) {
+            case SOLID: state = "Solid"; break;
+            case LIQUID: state = "Liquid"; break;
+            case GAS: state = "Gas"; break;
+            case UNKNOWN: state = "Unknown"; break;
+            default: state = "VALUE NOT RECOGNIZED";
+        }
+
+        return state;
+    }
 }

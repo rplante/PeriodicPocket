@@ -36,6 +36,8 @@ public class ElementActivity extends AppCompatActivity {
         tFamily = findViewById(R.id.elementFamily);
         tState = findViewById(R.id.elementState);
         tRadio = findViewById(R.id.elementRadioactivity);
+
+        PopulateDatabaseActivity.populateDatabase(db);
     }
 
     public void loadInfo(View view) {
@@ -53,16 +55,16 @@ public class ElementActivity extends AppCompatActivity {
         if (test.getRadioactivity()) mRadio = true;
         else mRadio = false;
 
-        tName.setText(mName);
-        tSymbol.setText(mSymbol);
-        tNum.setText(Integer.toString(mNum));
-        tWeight.setText(Float.toString(mWeight));
-        tPeriod.setText(mPeriod);
-        tGroup.setText(mGroup);
-        tFamily.setText(mFamily.toString());
-        tState.setText(mState.toString());
-        if (mRadio) tRadio.setText(R.string.radioactivity_true);
-        else tRadio.setText(R.string.radioactivity_false);
+        tName.setText("Name: " + mName);
+        tSymbol.setText("Atomic Symbol: " + mSymbol);
+        tNum.setText("Atomic Number: " + Integer.toString(mNum));
+        tWeight.setText("Atomic Weight: " + Float.toString(mWeight));
+        tPeriod.setText("Period: " + mPeriod);
+        tGroup.setText("Group: " + mGroup);
+        tFamily.setText("Family: " + mFamily.toString());
+        tState.setText("State at 0*C: " + mState.toString());
+        if (mRadio) tRadio.setText("Radioactive? Yes");
+        else tRadio.setText("Radioactive? No");
 
     }
 }

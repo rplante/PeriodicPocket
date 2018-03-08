@@ -12,10 +12,9 @@ public class PopulateDatabaseActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_element);
+    }
 
-        DatabaseHandler db = new DatabaseHandler(this);
-
-        //Insert elements
+    public static void populateDatabase(DatabaseHandler db) {
         db.addElement(new Element("Hydrogen", "H", 1, 1.008f, "1", "1", Family.DIATOMIC_NONMETAL, State.GAS, false));
         db.addElement(new Element("Helium", "He", 2, 4.003f, "1", "18", Family.NOBLE_GAS, State.GAS, false));
         db.addElement(new Element("Lithium", "Li", 3, 6.940f, "2", "1", Family.ALKALI_METAL, State.SOLID, false));
