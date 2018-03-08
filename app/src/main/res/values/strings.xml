@@ -3,4 +3,33 @@
 
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="element_name">[ELEMENT NAME]</string>
+    <string name="element_symbol">[ELEMENT SYMBOL]</string>
+    <string name="atomic_number">[ATOMIC NUMBER]</string>
+    <string name="atomic_weight">[ATOMIC WEIGHT]</string>
+    <string name="period">[PERIOD]</string>
+    <string name="group">[GROUP]</string>
+    <string name="family">[FAMILY]</string>
+    <string name="state">[STATE]</string>
+    <string name="radioactivity">[RADIOACTIVITY]</string>
+
+    <string name="radioactivity_true">Yes</string>
+    <string name="radioactivity_false">No</string>
+
+    <string name="state_solid">Solid</string>
+    <string name="state_liquid">Liquid</string>
+    <string name="state_gas">Gas</string>
+    <string name="state_unknown">Unknown</string>
+
+    <string name="family_alkali">Alkali Metal</string>
+    <string name="family_alkaline">Alkaline Earth Metal</string>
+    <string name="family_lanthanide">Lanthanide</string>
+    <string name="family_actinide">Actinide</string>
+    <string name="family_transition">Transition Metal</string>
+    <string name="family_post">Post-Transition Metal</string>
+    <string name="family_metalloid">Metalloid</string>
+    <string name="family_polyatomic">Polyatomic Nonmetal</string>
+    <string name="family_diatomic">Diatomic Nonmetal</string>
+    <string name="family_noble">Noble Gas</string>
+    <string name="family_unknown">Unknown</string>
 </resources>

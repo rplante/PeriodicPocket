@@ -5,26 +5,27 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 /**
  * Created by Rachel on 3/7/2018.
  */
 
 public class DatabaseHandler extends SQLiteOpenHelper {
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
     private static final String DATABASE_NAME = "ElementInfo";
     //Elements Table
     private static final String TABLE_ELEMENTS = "Elements";
     //Elements Columns
-    private static final String PK_NAME = "name";
-    private static final String SYMBOL = "symbol";
-    private static final String ATNUM = "atNum";
-    private static final String ATWEIGHT = "atWeight";
-    private static final String PERIOD = "period";
-    private static final String GROUP = "group";
-    private static final String FAMILY = "family";
-    private static final String STATE = "state";
-    private static final String RADIOACTIVITY = "radioactivity";
+    private static final String PK_NAME = "eName";
+    private static final String SYMBOL = "eSymbol";
+    private static final String ATNUM = "eAtNum";
+    private static final String ATWEIGHT = "eAtWeight";
+    private static final String PERIOD = "ePeriod";
+    private static final String GROUP = "eGroup";
+    private static final String FAMILY = "eFamily";
+    private static final String STATE = "eState";
+    private static final String RADIOACTIVITY = "eRadioactivity";
 
 
     public DatabaseHandler(Context context) {
@@ -34,14 +35,14 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String CREATE_ELEMENTS_TABLE = "CREATE TABLE " + TABLE_ELEMENTS + "(" +
-                                        PK_NAME + " TEXT PRIMARY KEY," +
-                                        SYMBOL + " TEXT," +
-                                        ATNUM + " INTEGER," +
-                                        ATWEIGHT + " REAL," +
-                                        PERIOD + " TEXT," +
-                                        GROUP + " TEXT," +
-                                        FAMILY + " NUMBER," +
-                                        STATE + " NUMBER," +
+                                        PK_NAME + " TEXT PRIMARY KEY, " +
+                                        SYMBOL + " TEXT, " +
+                                        ATNUM + " INTEGER, " +
+                                        ATWEIGHT + " REAL, " +
+                                        PERIOD + " TEXT, " +
+                                        GROUP + " NUMBER, " +
+                                        FAMILY + " NUMBER, " +
+                                        STATE + " TEXT, " +
                                         RADIOACTIVITY + " TEXT" + ")";
         db.execSQL(CREATE_ELEMENTS_TABLE);
     }
@@ -71,27 +72,29 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.close();
     }
     //Get element
-    public Element getElement(String name) {
+    public Element getElement(String eName) {
         SQLiteDatabase db = this.getReadableDatabase();
+        Element element;
 
-        Cursor cursor = db.query(TABLE_ELEMENTS, new String[] {PK_NAME, SYMBOL, ATNUM, ATWEIGHT,
-                                                               PERIOD, GROUP, FAMILY, STATE,
-                                                               RADIOACTIVITY}, PK_NAME + "=?",
-                                                 new String[] {String.valueOf(name) }, null,null,null,null);
-        if(cursor != null)
-            cursor.moveToFirst();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_ELEMENTS + " WHERE " + PK_NAME + " = \"" + eName + "\"", null);
+        if(cursor != null && cursor.moveToFirst()) {
+            element = new Element(cursor.getString(0),
+                    cursor.getString(1),
+                    Integer.parseInt(cursor.getString(2)),
+                    Float.parseFloat(cursor.getString(3)),
+                    cursor.getString(4),
+                    cursor.getString(5),
+                    Family.values()[Integer.parseInt(cursor.getString(6))],
+                    State.values()[Integer.parseInt(cursor.getString(7))],
+                    Boolean.parseBoolean(cursor.getString(8)));
 
-        Element element = new Element(cursor.getString(0),
-                                      cursor.getString(1),
-                                      Integer.parseInt(cursor.getString(2)),
-                                      Float.parseFloat(cursor.getString(3)),
-                                      cursor.getString(4),
-                                      cursor.getString(5),
-                                      Family.values()[Integer.parseInt(cursor.getString(6))],
-                                      State.values()[Integer.parseInt(cursor.getString(7))],
-                                      Boolean.parseBoolean(cursor.getString(8)));
-
-        cursor.close();
+            cursor.close();
+        }
+        else {
+            //this means our db never had the inserts performed on it...
+            Log.d("DBHandler.getElement : ", "DB values never inserted into DB");
+            element = new Element("nullElement", "nullElement", 0, 0.0f, "nullElement", "nullElement", Family.UNKNOWN, State.UNKNOWN, false);
+        }
         return element;
     }
     //Get count of elements

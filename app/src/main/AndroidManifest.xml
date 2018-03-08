@@ -21,7 +21,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ElementActivity"></activity>
+        <activity
+            android:name=".ElementActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme">
+        </activity>
     </application>
 
 </manifest>
