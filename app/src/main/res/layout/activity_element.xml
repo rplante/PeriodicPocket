@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/hydrogen"
         android:contentDescription="@string/element_symbol"
-        android:onClick="loadInfo"/>
+        />
 
     <TextView
         android:id="@+id/elementName"

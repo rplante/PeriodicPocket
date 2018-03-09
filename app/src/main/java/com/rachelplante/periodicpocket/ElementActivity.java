@@ -7,9 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class ElementActivity extends AppCompatActivity {
-
-    protected DatabaseHandler db;
-
+    private DatabaseHandler db;
     private TextView tName;
     private TextView tSymbol;
     private TextView tNum;
@@ -25,7 +23,7 @@ public class ElementActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_element);
 
-        db = new DatabaseHandler(this);
+        db = TableActivity.db;
 
         tName = findViewById(R.id.elementName);
         tSymbol = findViewById(R.id.elementSymbol);
@@ -37,11 +35,19 @@ public class ElementActivity extends AppCompatActivity {
         tState = findViewById(R.id.elementState);
         tRadio = findViewById(R.id.elementRadioactivity);
 
-        PopulateDatabaseActivity.populateDatabase(db);
+        Bundle b = getIntent().getExtras();
+        if(b != null) {
+            String fetchElement = b.getString("elementName");
+            Log.d("ElementAct.onCreate :", "fetchElement = " + fetchElement);
+            loadInfo(fetchElement);
+        }
     }
 
-    public void loadInfo(View view) {
-        Element test = db.getElement("Hydrogen");
+    public void loadInfo(String element) {
+        Log.d("ElementAct.loadInfo :", "element = " + element);
+        int count = db.getElementsCount();
+        Log.d("ElementAct.loadInfo :", "Elements currently in db = " + count);
+        Element test = db.getElement(element);
 
         String mName = test.getName();
         String mSymbol = test.getSymbol();
@@ -54,6 +60,8 @@ public class ElementActivity extends AppCompatActivity {
         boolean mRadio;
         if (test.getRadioactivity()) mRadio = true;
         else mRadio = false;
+        Log.d("ElementAct.loadInfo :", "Family = " + mFamily);
+        Log.d("ElementAct.loadInfo :", "State = " + mState);
 
         tName.setText("Name: " + mName);
         tSymbol.setText("Atomic Symbol: " + mSymbol);

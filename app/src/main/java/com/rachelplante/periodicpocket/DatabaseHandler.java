@@ -78,7 +78,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         Element element;
 
+        Log.d("DBHandler.getElement :", "Value of eName = " + eName);
         Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_ELEMENTS + " WHERE " + PK_NAME + " = \"" + eName + "\"", null);
+        if(cursor == null)
+            Log.d("DBHandler.getElement :", "Value of cursor is null");
         if(cursor != null && cursor.moveToFirst()) {
             element = new Element(cursor.getString(0),
                     cursor.getString(1),
@@ -104,7 +107,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         String countQuery = "SELECT * FROM " + TABLE_ELEMENTS;
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(countQuery, null);
-        cursor.close();
+        //cursor.close();
 
         return cursor.getCount();
     }

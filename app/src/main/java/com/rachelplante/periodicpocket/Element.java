@@ -1,5 +1,7 @@
 package com.rachelplante.periodicpocket;
 
+import android.util.Log;
+
 public class Element {
     private String name;
     private String symbol;
@@ -47,40 +49,42 @@ public class Element {
         return this.group;
     }
     public Family getFamily() {
+        Log.d("Element.getFamily :", "Reported Family = " + this.family);
         return this.family;
     }
     public State getState() {
+        Log.d("Element.getState :", "Reported State = " + this.state);
         return this.state;
     }
     public boolean getRadioactivity() {
         return this.radioactivity;
     }
-    //Setters
-    public void setName(String name) {
-        this.name = name;
-    }
-    public void setSymbol(String symbol) {
-        this.symbol = symbol;
-    }
-    public void setAtNum(int atNum) {
-        this.atNum = atNum;
-    }
-    public void setAtWeight(float atWeight) {
-        this.atWeight = atWeight;
-    }
-    public void setPeriod(String period) {
-        this.period = period;
-    }
-    public void setGroup(String group) {
-        this.group = group;
-    }
-    public void setFamily(Family family) {
-        this.family = family;
-    }
-    public void setState(State state) {
-        this.state = state;
-    }
-    public void setRadioactivity(boolean radioactivity) {
-        this.radioactivity = radioactivity;
-    }
+//    //Setters
+//    public void setName(String name) {
+//        this.name = name;
+//    }
+//    public void setSymbol(String symbol) {
+//        this.symbol = symbol;
+//    }
+//    public void setAtNum(int atNum) {
+//        this.atNum = atNum;
+//    }
+//    public void setAtWeight(float atWeight) {
+//        this.atWeight = atWeight;
+//    }
+//    public void setPeriod(String period) {
+//        this.period = period;
+//    }
+//    public void setGroup(String group) {
+//        this.group = group;
+//    }
+//    public void setFamily(Family family) {
+//        this.family = family;
+//    }
+//    public void setState(State state) {
+//        this.state = state;
+//    }
+//    public void setRadioactivity(boolean radioactivity) {
+//        this.radioactivity = radioactivity;
+//    }
 }

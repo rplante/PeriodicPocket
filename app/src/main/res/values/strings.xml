@@ -32,4 +32,6 @@
     <string name="family_diatomic">Diatomic Nonmetal</string>
     <string name="family_noble">Noble Gas</string>
     <string name="family_unknown">Unknown</string>
+
+    <string name="Section">Section</string>
 </resources>

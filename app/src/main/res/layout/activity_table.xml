@@ -1,4 +1,5 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -53,6 +54,33 @@
                 android:onClick="loadElement"/>
 
         </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/toEarthMetals"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            app:srcCompat="@android:drawable/btn_star_big_on" />
+        <ImageButton
+            android:id="@+id/toMetals"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_marginStart="130dp"
+            app:srcCompat="@android:drawable/btn_star_big_on" />
+
+        <ImageButton
+            android:id="@+id/toNonmetals"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_marginStart="260dp"
+            app:srcCompat="@android:drawable/btn_star_big_on" />
+
+        <ImageButton
+            android:id="@+id/toRareMetals"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_marginStart="390dp"
+            app:srcCompat="@android:drawable/btn_star_big_on" />
+
     </FrameLayout>
 
 </FrameLayout>

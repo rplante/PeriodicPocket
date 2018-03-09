@@ -5,13 +5,7 @@ package com.rachelplante.periodicpocket;
  */
 
 public enum State {
-    SOLID (0), LIQUID (1), GAS (2), UNKNOWN (-1);
-
-    private final int state;
-
-    State(int i) {
-        this.state = i;
-    }
+    SOLID, LIQUID, GAS, UNKNOWN;
 
     @Override
     public String toString() {

@@ -25,8 +25,11 @@
             android:name=".ElementActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="landscape"
-            android:theme="@style/FullscreenTheme">
-        </activity>
+            android:theme="@style/FullscreenTheme" />
+        <activity android:name=".EarthMetalsActivity" />
+        <activity android:name=".MetalsActivity" />
+        <activity android:name=".NonmetalsActivity" />
+        <activity android:name=".RareMetalsActivity"></activity>
     </application>
 
 </manifest>

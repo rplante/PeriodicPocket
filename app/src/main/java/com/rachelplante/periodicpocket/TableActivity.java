@@ -2,18 +2,27 @@ package com.rachelplante.periodicpocket;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.media.Image;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ImageButton;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
 public class TableActivity extends AppCompatActivity {
+    public static DatabaseHandler db;
+
+    private ImageButton bToEarthMetals;
+    private ImageButton bToMetals;
+    private ImageButton bToNonmetals;
+    private ImageButton bToRareMetals;
+
     /**
      * Whether or not the system UI should be auto-hidden after
      * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
@@ -94,6 +103,42 @@ public class TableActivity extends AppCompatActivity {
         mControlsView = findViewById(R.id.fullscreen_content_controls);
         mContentView = findViewById(R.id.fullscreen_content);
 
+        db = new DatabaseHandler(this);
+        PopulateDatabaseActivity.populateDatabase(db);
+
+        bToEarthMetals = findViewById(R.id.toEarthMetals);
+        bToMetals = findViewById(R.id.toMetals);
+        bToNonmetals = findViewById(R.id.toNonmetals);
+        bToRareMetals = findViewById(R.id.toRareMetals);
+
+        bToEarthMetals.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                launchSectionEarthMetals(view);
+            }
+        });
+
+        bToMetals.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                launchSectionMetals(view);
+            }
+        });
+
+        bToNonmetals.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                launchSectionNonmetals(view);
+            }
+        });
+
+        bToRareMetals.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                launchSectionRareMetals(view);
+            }
+        });
+
 
         // Set up the user interaction to manually show or hide the system UI.
         mContentView.setOnClickListener(new View.OnClickListener() {
@@ -164,6 +209,27 @@ public class TableActivity extends AppCompatActivity {
 
     public void loadElement(View view) {
         Intent intent = new Intent(this, ElementActivity.class);
+        intent.putExtra("elementName", "Hydrogen");
+        startActivity(intent);
+    }
+
+    public void launchSectionEarthMetals(View view) {
+        Intent intent = new Intent(this, EarthMetalsActivity.class);
+        startActivity(intent);
+    }
+
+    public void launchSectionMetals(View view) {
+        Intent intent = new Intent(this, MetalsActivity.class);
+        startActivity(intent);
+    }
+
+    public void launchSectionNonmetals(View view) {
+        Intent intent = new Intent(this, NonmetalsActivity.class);
+        startActivity(intent);
+    }
+
+    public void launchSectionRareMetals(View view) {
+        Intent intent = new Intent(this, RareMetalsActivity.class);
         startActivity(intent);
     }
 }
