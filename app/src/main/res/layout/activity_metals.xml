@@ -6,14 +6,401 @@
     android:layout_height="match_parent"
     tools:context="com.rachelplante.periodicpocket.MetalsActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="280dp"
-        android:layout_marginTop="140dp"
-        android:text="Metals Activity"
+    <TableLayout
+        android:layout_width="667dp"
+        android:layout_height="323dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
+        <TableRow
+            android:id="@+id/rGroup4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <ImageButton
+                android:id="@+id/bScandium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/scandium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bTitanium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/titanium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bVanadium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/vanadium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bChromium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/chromium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bManganese"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/manganese"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bIron"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/iron"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bCobalt"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/cobalt"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bNickel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/nickel"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bCopper"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/copper"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bZinc"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/zinc"
+                android:onClick="loadElement" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rGroup5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <ImageButton
+                android:id="@+id/bYttrium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/yttrium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bZirconium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/zirconium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bNiobium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/niobium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bMolybdenum"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/molybdenum"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bTechnetium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/technetium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bRuthenium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/ruthenium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bRhodium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/rhodium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bPalladium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/palladium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bSilver"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/silver"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bCadmium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/cadmium"
+                android:onClick="loadElement" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rGroup6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <ImageButton
+                android:id="@+id/space1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/star_big_off"
+                android:layout_weight="1"
+                android:contentDescription="@string/hydrogen" />
+
+            <ImageButton
+                android:id="@+id/bHafnium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/hafnium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bTantalum"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/tantalum"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bTungsten"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/tungsten"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bRhenium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/rhenium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bOsmium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/osmium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bIridium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/iridium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bPlatinum"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/platinum"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bGold"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/gold"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bMercury"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/mercury"
+                android:onClick="loadElement" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rGroup7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <ImageButton
+                android:id="@+id/space2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/star_big_off"
+                android:layout_weight="1"
+                android:contentDescription="@string/hydrogen" />
+
+            <ImageButton
+                android:id="@+id/bRutherfordium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/rutherfordium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bDubnium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/dubnium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bSeaborgium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/seaborgium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bBohrium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/bohrium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bHassium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/hassium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bMeitnerium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/meitnerium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bDarmstadtium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/darmstadtium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bRoentgenium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/roentgenium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bCopernicium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_weight="1"
+                android:contentDescription="@string/copernicium"
+                android:onClick="loadElement" />
+        </TableRow>
+
+    </TableLayout>
 </android.support.constraint.ConstraintLayout>
