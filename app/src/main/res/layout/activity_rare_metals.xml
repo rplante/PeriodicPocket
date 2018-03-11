@@ -4,16 +4,300 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.rachelplante.periodicpocket.RareMetalsActivity">
+    tools:context="com.rachelplante.periodicpocket.RareMetalsActivity"
+    android:background="#ffffff" >
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="280dp"
-        android:layout_marginTop="140dp"
-        android:text="Rare Metals Activity"
+    <TableLayout
+        android:layout_width="667dp"
+        android:layout_height="323dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#ffffff" >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff" >
+
+            <ImageButton
+                android:id="@+id/bLanthanum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/lanthanum"
+                android:layout_weight="1"
+                android:contentDescription="@string/lanthanum"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bCerium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/cerium"
+                android:layout_weight="1"
+                android:contentDescription="@string/cerium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bPraseodymium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/praseodymium"
+                android:layout_weight="1"
+                android:contentDescription="@string/praseodymium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bNeodymium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/neodymium"
+                android:layout_weight="1"
+                android:contentDescription="@string/neodymium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bPromethium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/promethium"
+                android:layout_weight="1"
+                android:contentDescription="@string/promethium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bSamarium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/samarium"
+                android:layout_weight="1"
+                android:contentDescription="@string/samarium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bEuropium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/europium"
+                android:layout_weight="1"
+                android:contentDescription="@string/europium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bGadolinium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/gadolinium"
+                android:layout_weight="1"
+                android:contentDescription="@string/gadolinium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bTerbium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/terbium"
+                android:layout_weight="1"
+                android:contentDescription="@string/terbium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bDysprosium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/dysprosium"
+                android:layout_weight="1"
+                android:contentDescription="@string/dysprosium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bHolmium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/holmium"
+                android:layout_weight="1"
+                android:contentDescription="@string/holmium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bErbium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/erbium"
+                android:layout_weight="1"
+                android:contentDescription="@string/erbium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bThulium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/thulium"
+                android:layout_weight="1"
+                android:contentDescription="@string/thulium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bYtterbium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ytterbium"
+                android:layout_weight="1"
+                android:contentDescription="@string/ytterbium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bLutetium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/lutetium"
+                android:layout_weight="1"
+                android:contentDescription="@string/lutetium"
+                android:onClick="loadElement" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff" >
+
+            <ImageButton
+                android:id="@+id/bActinium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/actinium"
+                android:layout_weight="1"
+                android:contentDescription="@string/actinium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bThorium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/thorium"
+                android:layout_weight="1"
+                android:contentDescription="@string/thorium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bProtactinium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/protactinium"
+                android:layout_weight="1"
+                android:contentDescription="@string/protactinium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bUranium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/uranium"
+                android:layout_weight="1"
+                android:contentDescription="@string/uranium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bNeptunium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/neptunium"
+                android:layout_weight="1"
+                android:contentDescription="@string/neptunium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bPlutonium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/plutonium"
+                android:layout_weight="1"
+                android:contentDescription="@string/plutonium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bAmericium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/americium"
+                android:layout_weight="1"
+                android:contentDescription="@string/americium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bCurium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/curium"
+                android:layout_weight="1"
+                android:contentDescription="@string/curium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bBerkelium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/berkelium"
+                android:layout_weight="1"
+                android:contentDescription="@string/berkelium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bCalifornium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/californium"
+                android:layout_weight="1"
+                android:contentDescription="@string/californium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bEinsteinium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/einsteinium"
+                android:layout_weight="1"
+                android:contentDescription="@string/einsteinium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bFermium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/fermium"
+                android:layout_weight="1"
+                android:contentDescription="@string/fermium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bMendelevium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/mendelevium"
+                android:layout_weight="1"
+                android:contentDescription="@string/mendelevium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bNobelium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/nobelium"
+                android:layout_weight="1"
+                android:contentDescription="@string/nobelium"
+                android:onClick="loadElement" />
+
+            <ImageButton
+                android:id="@+id/bLawrencium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/lawrencium"
+                android:layout_weight="1"
+                android:contentDescription="@string/lawrencium"
+                android:onClick="loadElement" />
+        </TableRow>
+
+    </TableLayout>
 
 </android.support.constraint.ConstraintLayout>

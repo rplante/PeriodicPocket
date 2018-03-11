@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.rachelplante.periodicpocket.MetalsActivity">
+    tools:context="com.rachelplante.periodicpocket.MetalsActivity"
+    android:background="#ffffff" >
 
     <TableLayout
         android:layout_width="667dp"
@@ -12,7 +13,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#ffffff" >
 
         <TableRow
             android:id="@+id/rGroup4"
@@ -220,9 +222,8 @@
                 android:id="@+id/space1"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/star_big_off"
                 android:layout_weight="1"
-                android:contentDescription="@string/hydrogen" />
+                android:background="#00000000" />
 
             <ImageButton
                 android:id="@+id/bHafnium"
@@ -316,9 +317,8 @@
                 android:id="@+id/space2"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/star_big_off"
                 android:layout_weight="1"
-                android:contentDescription="@string/hydrogen" />
+                android:background="#00000000" />
 
             <ImageButton
                 android:id="@+id/bRutherfordium"
