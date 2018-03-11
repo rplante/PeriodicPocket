@@ -1,9 +1,11 @@
 package com.rachelplante.periodicpocket;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ElementActivity extends AppCompatActivity {
@@ -17,6 +19,7 @@ public class ElementActivity extends AppCompatActivity {
     private TextView tFamily;
     private TextView tState;
     private TextView tRadio;
+    private ImageView iElement;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,8 @@ public class ElementActivity extends AppCompatActivity {
         tState = findViewById(R.id.elementState);
         tRadio = findViewById(R.id.elementRadioactivity);
 
+        iElement = findViewById(R.id.element_logo);
+
         Bundle b = getIntent().getExtras();
         if(b != null) {
             String fetchElement = b.getString("elementName");
@@ -44,9 +49,6 @@ public class ElementActivity extends AppCompatActivity {
     }
 
     public void loadInfo(String element) {
-        Log.d("ElementAct.loadInfo :", "element = " + element);
-        int count = db.getElementsCount();
-        Log.d("ElementAct.loadInfo :", "Elements currently in db = " + count);
         Element test = db.getElement(element);
 
         String mName = test.getName();
@@ -74,5 +76,13 @@ public class ElementActivity extends AppCompatActivity {
         if (mRadio) tRadio.setText("Radioactive? Yes");
         else tRadio.setText("Radioactive? No");
 
+        element = element.toLowerCase(); //convert to lowercase because our file names are lowercase
+        iElement.setImageResource(getImageId(this, element));
+
+    }
+
+    //Source ==> https://stackoverflow.com/a/6783342
+    public int getImageId(Context context, String imageName) {
+        return context.getResources().getIdentifier("drawable/" + imageName, null, context.getPackageName());
     }
 }
