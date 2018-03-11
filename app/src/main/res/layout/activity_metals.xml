@@ -24,7 +24,7 @@
                 android:id="@+id/bScandium"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/btn_star_big_on"
+                app:srcCompat="@drawable/scandium"
                 android:layout_weight="1"
                 android:contentDescription="@string/scandium"
                 android:onClick="loadElement" />
@@ -33,7 +33,7 @@
                 android:id="@+id/bTitanium"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/btn_star_big_on"
+                app:srcCompat="@drawable/titanium"
                 android:layout_weight="1"
                 android:contentDescription="@string/titanium"
                 android:onClick="loadElement" />
@@ -42,7 +42,7 @@
                 android:id="@+id/bVanadium"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/btn_star_big_on"
+                app:srcCompat="@drawable/vanadium"
                 android:layout_weight="1"
                 android:contentDescription="@string/vanadium"
                 android:onClick="loadElement" />
@@ -60,7 +60,7 @@
                 android:id="@+id/bManganese"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/btn_star_big_on"
+                app:srcCompat="@drawable/manganese"
                 android:layout_weight="1"
                 android:contentDescription="@string/manganese"
                 android:onClick="loadElement" />
@@ -69,7 +69,7 @@
                 android:id="@+id/bIron"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/btn_star_big_on"
+                app:srcCompat="@drawable/iron"
                 android:layout_weight="1"
                 android:contentDescription="@string/iron"
                 android:onClick="loadElement" />
@@ -87,7 +87,7 @@
                 android:id="@+id/bNickel"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/btn_star_big_on"
+                app:srcCompat="@drawable/nickel"
                 android:layout_weight="1"
                 android:contentDescription="@string/nickel"
                 android:onClick="loadElement" />
@@ -105,7 +105,7 @@
                 android:id="@+id/bZinc"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/btn_star_big_on"
+                app:srcCompat="@drawable/zinc"
                 android:layout_weight="1"
                 android:contentDescription="@string/zinc"
                 android:onClick="loadElement" />
@@ -122,7 +122,7 @@
                 android:id="@+id/bYttrium"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/btn_star_big_on"
+                app:srcCompat="@drawable/yttrium"
                 android:layout_weight="1"
                 android:contentDescription="@string/yttrium"
                 android:onClick="loadElement" />
@@ -131,7 +131,7 @@
                 android:id="@+id/bZirconium"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/btn_star_big_on"
+                app:srcCompat="@drawable/zirconium"
                 android:layout_weight="1"
                 android:contentDescription="@string/zirconium"
                 android:onClick="loadElement" />
@@ -140,7 +140,7 @@
                 android:id="@+id/bNiobium"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/btn_star_big_on"
+                app:srcCompat="@drawable/niobium"
                 android:layout_weight="1"
                 android:contentDescription="@string/niobium"
                 android:onClick="loadElement" />
@@ -149,7 +149,7 @@
                 android:id="@+id/bMolybdenum"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/btn_star_big_on"
+                app:srcCompat="@drawable/molybdenum"
                 android:layout_weight="1"
                 android:contentDescription="@string/molybdenum"
                 android:onClick="loadElement" />
@@ -158,7 +158,7 @@
                 android:id="@+id/bTechnetium"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/btn_star_big_on"
+                app:srcCompat="@drawable/technetium"
                 android:layout_weight="1"
                 android:contentDescription="@string/technetium"
                 android:onClick="loadElement" />
@@ -167,7 +167,7 @@
                 android:id="@+id/bRuthenium"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/btn_star_big_on"
+                app:srcCompat="@drawable/ruthenium"
                 android:layout_weight="1"
                 android:contentDescription="@string/ruthenium"
                 android:onClick="loadElement" />
@@ -176,7 +176,7 @@
                 android:id="@+id/bRhodium"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/btn_star_big_on"
+                app:srcCompat="@drawable/rhodium"
                 android:layout_weight="1"
                 android:contentDescription="@string/rhodium"
                 android:onClick="loadElement" />
@@ -185,7 +185,7 @@
                 android:id="@+id/bPalladium"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/btn_star_big_on"
+                app:srcCompat="@drawable/palladium"
                 android:layout_weight="1"
                 android:contentDescription="@string/palladium"
                 android:onClick="loadElement" />
@@ -194,7 +194,7 @@
                 android:id="@+id/bSilver"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/btn_star_big_on"
+                app:srcCompat="@drawable/silver"
                 android:layout_weight="1"
                 android:contentDescription="@string/silver"
                 android:onClick="loadElement" />
@@ -228,7 +228,7 @@
                 android:id="@+id/bHafnium"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/btn_star_big_on"
+                app:srcCompat="@drawable/hafnium"
                 android:layout_weight="1"
                 android:contentDescription="@string/hafnium"
                 android:onClick="loadElement" />
@@ -237,7 +237,7 @@
                 android:id="@+id/bTantalum"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/btn_star_big_on"
+                app:srcCompat="@drawable/tantalum"
                 android:layout_weight="1"
                 android:contentDescription="@string/tantalum"
                 android:onClick="loadElement" />
@@ -246,7 +246,7 @@
                 android:id="@+id/bTungsten"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/btn_star_big_on"
+                app:srcCompat="@drawable/tungsten"
                 android:layout_weight="1"
                 android:contentDescription="@string/tungsten"
                 android:onClick="loadElement" />
@@ -255,7 +255,7 @@
                 android:id="@+id/bRhenium"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/btn_star_big_on"
+                app:srcCompat="@drawable/rhenium"
                 android:layout_weight="1"
                 android:contentDescription="@string/rhenium"
                 android:onClick="loadElement" />
@@ -264,7 +264,7 @@
                 android:id="@+id/bOsmium"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/btn_star_big_on"
+                app:srcCompat="@drawable/osmium"
                 android:layout_weight="1"
                 android:contentDescription="@string/osmium"
                 android:onClick="loadElement" />
@@ -273,7 +273,7 @@
                 android:id="@+id/bIridium"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/btn_star_big_on"
+                app:srcCompat="@drawable/iridium"
                 android:layout_weight="1"
                 android:contentDescription="@string/iridium"
                 android:onClick="loadElement" />
@@ -282,7 +282,7 @@
                 android:id="@+id/bPlatinum"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/btn_star_big_on"
+                app:srcCompat="@drawable/platinum"
                 android:layout_weight="1"
                 android:contentDescription="@string/platinum"
                 android:onClick="loadElement" />
@@ -291,7 +291,7 @@
                 android:id="@+id/bGold"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/btn_star_big_on"
+                app:srcCompat="@drawable/gold"
                 android:layout_weight="1"
                 android:contentDescription="@string/gold"
                 android:onClick="loadElement" />
@@ -300,7 +300,7 @@
                 android:id="@+id/bMercury"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/btn_star_big_on"
+                app:srcCompat="@drawable/mercury"
                 android:layout_weight="1"
                 android:contentDescription="@string/mercury"
                 android:onClick="loadElement" />
@@ -324,7 +324,7 @@
                 android:id="@+id/bRutherfordium"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/btn_star_big_on"
+                app:srcCompat="@drawable/rutherfordium"
                 android:layout_weight="1"
                 android:contentDescription="@string/rutherfordium"
                 android:onClick="loadElement" />
@@ -342,7 +342,7 @@
                 android:id="@+id/bSeaborgium"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/btn_star_big_on"
+                app:srcCompat="@drawable/seaborgium"
                 android:layout_weight="1"
                 android:contentDescription="@string/seaborgium"
                 android:onClick="loadElement" />
@@ -360,7 +360,7 @@
                 android:id="@+id/bHassium"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/btn_star_big_on"
+                app:srcCompat="@drawable/hassium"
                 android:layout_weight="1"
                 android:contentDescription="@string/hassium"
                 android:onClick="loadElement" />
@@ -369,7 +369,7 @@
                 android:id="@+id/bMeitnerium"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/btn_star_big_on"
+                app:srcCompat="@drawable/meitnerium"
                 android:layout_weight="1"
                 android:contentDescription="@string/meitnerium"
                 android:onClick="loadElement" />
@@ -387,7 +387,7 @@
                 android:id="@+id/bRoentgenium"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:drawable/btn_star_big_on"
+                app:srcCompat="@drawable/roentgenium"
                 android:layout_weight="1"
                 android:contentDescription="@string/roentgenium"
                 android:onClick="loadElement" />
